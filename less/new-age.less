@@ -579,6 +579,34 @@ section.history {
     }
 }
 
+section.books {
+    [class^='imghvr-'],
+    [class*=' imghvr-']{
+        background-color: @theme-primary;
+        figcaption {
+            background-color: @theme-primary;
+            color: @primary-link;
+        }
+        h3 {
+            color: @primary-link;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        p {
+            font-size: 16px;
+        }
+        a.btn {
+            position: static;
+            color: @primary-link;
+            &:focus,
+            &:active{
+                background: @primary-link;
+                text: white;
+                position: static;
+            }
+        }
+    }
+}
 footer {
     background-color: @gray-darker;
     padding: 25px 0;
