@@ -607,6 +607,29 @@ section.books {
         }
     }
 }
+
+section.statistics {
+    .stat {
+        margin-top: 30px;
+        text-align: center;
+        &:hover > i{
+            cursor: pointer;
+            font-size: 80px;
+            transition: 1s;
+            transform: rotate(360deg);
+            .backgroud-gradient;
+        }
+        i {
+            font-size: 60px;
+            display: block;
+        }
+        span {
+            font-weight: 800;
+            font-size: 90px;
+        }
+    }
+}
+
 footer {
     background-color: @gray-darker;
     padding: 25px 0;

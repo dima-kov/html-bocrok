@@ -28,4 +28,25 @@
         }
     })
 
+    // Index statistics counter 
+    var finished = false;
+    $(window).scroll(function() {
+        var oTop = $('#statistics').offset().top - window.innerHeight;
+        if (finished == false && $(window).scrollTop() > oTop) {
+            $('#statistics .count').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+            finished = true;
+        }
+     });
+
+
 })(jQuery); // End of use strict
