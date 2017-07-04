@@ -22,6 +22,24 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.delighted {
+  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to left, #7b4397, #dc2430);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.delighted::selection {
+  background-color: #eeeeee;
+}
+.rotate {
+  transform: rotate(-360deg);
+  transition: transform 0.5s;
+}
+.rotate:hover {
+  transition: 1s;
+  transform: rotate(360deg);
+}
 html,
 body {
   height: 100%;
@@ -63,6 +81,13 @@ p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+.center {
+  text-align: center;
+}
+.vertical-center {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .navbar-default {
   background-color: white;
@@ -407,6 +432,12 @@ section.owner div.inner-container div.avatar {
 }
 section.owner div.inner-container div.avatar img {
   border: 5px solid #fdcc52;
+  transform: rotate(-360deg);
+  transition: transform 0.5s;
+}
+section.owner div.inner-container div.avatar img:hover {
+  transition: 1s;
+  transform: rotate(360deg);
 }
 section.owner div.inner-container div.contacts {
   display: inline;
@@ -477,6 +508,9 @@ section.history .timeline > li .timeline-panel {
   padding: 0 20px 20px 30px;
   text-align: right;
 }
+section.history .timeline > li .timeline-panel .btn-outline:hover {
+  background: #16a085;
+}
 section.history .timeline > li .timeline-panel:before {
   right: auto;
   left: -15px;
@@ -494,16 +528,28 @@ section.history .timeline > li .timeline-image {
   position: absolute;
   left: 50%;
   border: 7px solid #ecf0f1;
-  border-radius: 100%;
   background-color: #ecf0f1;
+  border-radius: 100%;
   width: 200px;
   height: 200px;
   margin-left: -100px;
+  transform: rotate(-360deg);
+  transition: transform 0.5s;
 }
 section.history .timeline > li .timeline-image h4 {
   margin-top: 12px;
   font-size: 10px;
   line-height: 14px;
+}
+section.history .timeline > li:hover > .timeline-panel {
+  background: #107360;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: font-size 1s;
+}
+section.history .timeline > li:hover > .timeline-image {
+  transition: 1s;
+  transform: rotate(360deg);
 }
 section.history .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
@@ -603,6 +649,11 @@ section.books [class*=' imghvr-'] a.btn:active {
 section.statistics .stat {
   margin-top: 30px;
   text-align: center;
+}
+section.statistics .stat > i {
+  font-size: 60px;
+  transform: rotate(-360deg);
+  transition: font-size 1s ease-out, transform 1s ease;
 }
 section.statistics .stat:hover > i {
   cursor: pointer;

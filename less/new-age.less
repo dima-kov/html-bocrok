@@ -47,6 +47,14 @@ p {
     margin-bottom: 20px;
 }
 
+.center {
+    text-align: center;
+}
+
+.vertical-center {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 // Navigation
 
 .navbar-default {
@@ -398,6 +406,7 @@ section.owner {
 
             img {
                 border: 5px solid @theme-primary;
+                .rotate;
             }
         }
         div.contacts{
@@ -428,9 +437,6 @@ section.owner {
         }
     }
 }
-
-// Comment to divide
-
 
 section.history {
     .text-muted {
@@ -469,13 +475,16 @@ section.history {
             min-height: 170px;
         }
         & > li {
-
             .timeline-panel {
-              position: relative;
-              float: left;
-              width: 41%;
-              padding: 0 20px 20px 30px;
-              text-align: right;
+                position: relative;
+                float: left;
+                width: 41%;
+                padding: 0 20px 20px 30px;
+                text-align: right;
+
+                .btn-outline:hover{
+                    background: @theme-principal;
+                }
             }
             .timeline-panel:before {
                 right: auto;
@@ -494,17 +503,30 @@ section.history {
                 position: absolute;
                 left: 50%;
                 border: 7px solid @theme-principal-text;
-                border-radius: 100%;
                 background-color: @theme-principal-text;
-                // box-shadow: 0 0 5px darken(@theme-primary, 20%);
+                border-radius: 100%;
                 width: 200px;
                 height: 200px;
                 margin-left: -100px;
+                transform: rotate(-360deg);
+                transition: transform 0.5s;
             }
             .timeline-image h4 {
                 margin-top: 12px;
                 font-size: 10px;
                 line-height: 14px;
+            }
+            &:hover{
+                & > .timeline-panel {
+                    background: darken(@theme-principal, 10%);
+                    border-radius: 10px;
+                    font-size: 20px;
+                    transition: font-size 1s;
+                }
+                & > .timeline-image{
+                    transition: 1s;
+                    transform: rotate(360deg);
+                }
             }
         }
         & > li.timeline-inverted>.timeline-panel {
@@ -612,6 +634,11 @@ section.statistics {
     .stat {
         margin-top: 30px;
         text-align: center;
+        & > i{
+            font-size: 60px;
+            transform: rotate(-360deg);
+            transition: font-size 1s ease-out, transform 1s ease;
+        }
         &:hover > i{
             cursor: pointer;
             font-size: 80px;

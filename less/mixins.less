@@ -76,3 +76,21 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+.delighted {
+	.backgroud-gradient;
+	font-weight: bold;
+	&::selection {
+		background-color: @gray-lighter;
+	}
+}
+
+.rotate {
+	transform: rotate(-360deg);
+	transition: transform 0.5s;
+
+	&:hover {
+		transition: 1s;
+		transform: rotate(360deg);
+	}
+}
