@@ -89,6 +89,23 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+input {
+  display: block;
+  padding: 10px;
+  margin: 20px 0;
+  width: 100%;
+  line-height: 25px;
+  border-radius: 5px;
+  border: solid 1px #777777;
+}
+input:focus {
+  outline: red 5px;
+  border-color: #fdcc52;
+  box-shadow: 0 0 10px #fdcc52;
+}
+input:focus::-webkit-input-placeholder {
+  color: #fdcc52;
+}
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);

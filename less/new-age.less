@@ -55,8 +55,28 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-// Navigation
 
+input {
+    display: block;
+    padding: 10px;
+    margin: 20px 0;
+    width: 100%;
+    line-height: 25px;
+    border-radius: 5px;
+    border: solid 1px @gray-light;
+    &:focus {
+        outline: red 5px;
+        border-color: @theme-primary;
+        box-shadow: 0 0 10px @theme-primary;
+
+        &::-webkit-input-placeholder{
+            color: @theme-primary;
+        }
+    }
+
+}
+
+// Navigation
 .navbar-default {
     background-color: white;
     border-color: fade(@gray-darker, 5%);
@@ -437,6 +457,8 @@ section.owner {
         }
     }
 }
+
+section.form {}
 
 section.history {
     .text-muted {
