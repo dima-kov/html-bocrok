@@ -36,19 +36,20 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="/">BoCRoK</a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#download">Main</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#features">Features</a>
+                        <a class="page-scroll" href="#features">Books</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a href="#" class="btn btn-outline" data-toggle="modal" data-target="#register-login">Register/Login</a>
                     </li>
                 </ul>
             </div>
@@ -248,11 +249,14 @@
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
                         <h2>Взяти почитати</h2>
+                        <p class="text-muted">
+                            Швидше заповнюй цю форму! Власник книги отримає сповіщення про те, що ти хочеш почитати книгу "Людина розумна" і надішле тобі книгу за цими даними.
+                        </p>
                         <hr>
                     </div>
                 </div>
             </div>
-            <form action="" method="POST">
+            <form action="" class="tertiary" method="POST">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <input type="text" name="pib" placeholder="ПІБ">
@@ -264,7 +268,7 @@
                     </div>
                 </div>
                 <div class="center vertical-center">
-                    <button class="btn btn-filled btn-xl" type="submit">Надіслати</button>
+                    <button class="btn btn-filled-tertiary btn-xl" type="submit">Надіслати</button>
                 </div>
             </form>
         </div>
@@ -301,6 +305,30 @@
             </ul>
         </div>
     </footer>
+    <div id="register-login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header center">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Register</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="center">
+                            <input type="texr" name="first_name" placeholder="First Name">
+                            <input type="email" name="email" placeholder="E-mail">
+                            <input type="password" name="password" placeholder="Password">
+                            <button type="submit" class=" center btn btn-filled btn-xl">Register</button>
+                            or
+                            <a class="btn btn-outline-tertiary" data-dismiss="modal">Login</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer center">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- jQuery -->
     <script src="lib/jquery/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->

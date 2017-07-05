@@ -65,12 +65,12 @@ input {
     border-radius: 5px;
     border: solid 1px @gray-light;
     &:focus {
-        outline: red 5px;
+        outline: none;
         border-color: @theme-primary;
         box-shadow: 0 0 10px @theme-primary;
 
         &::-webkit-input-placeholder{
-            color: @theme-primary;
+            color: darken(@theme-primary, 10%);
         }
     }
 
@@ -97,9 +97,12 @@ input {
     }
     .nav {
         > li {
+            margin-top: 10px;
             > a {
                 .alt-font;
-                font-size: 11px;
+                font-size: 12px;
+                padding-top: 5px;
+                padding-bottom: 5px;
             }
             > a,
             > a:focus {
@@ -348,7 +351,7 @@ section.contact {
         margin-top: 0;
         margin-bottom: 25px;
         i {
-            color: @brand-google-plus;
+            color: @theme-tertiary;
         }
     }
     ul.list-social {
@@ -408,7 +411,7 @@ section.single-book {
         }
     }
     a {
-        color: @primary-link;
+        color: @theme-tertiary;
     }
     p {
         margin-top: 10px;
@@ -631,10 +634,10 @@ section.books {
         background-color: @theme-primary;
         figcaption {
             background-color: @theme-primary;
-            color: @primary-link;
+            color: @theme-tertiary;
         }
         h3 {
-            color: @primary-link;
+            color: @theme-tertiary;
             font-weight: bold;
             margin-top: 0;
         }
@@ -643,10 +646,10 @@ section.books {
         }
         a.btn {
             position: static;
-            color: @primary-link;
+            color: @theme-tertiary;
             &:focus,
             &:active{
-                background: @primary-link;
+                background: @theme-tertiary;
                 text: white;
                 position: static;
             }
@@ -730,35 +733,8 @@ footer {
     padding-left:0;
 }
 
-// Button Styles
-.btn-outline {
-    color: white;
-    border-color: white;
-    border: 1px solid;
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-        color: white;
-        background-color: @theme-primary;
-        border-color: white;
-    }
-}
 
-.btn-filled {
-    color: white;
-    background: @theme-primary;
-    &:hover,
-    &:focus,
-    &:active,
-    &:active:focus,
-    &.active{
-        background: darken(@theme-primary, 15%);
-        color: white;
-        outline: none;
-    }
-}
-
+/* --- Button Styles --- */
 .btn {
     .alt-font;
     border-radius: 300px;
@@ -767,6 +743,60 @@ footer {
 .btn-xl {
     padding: 15px 45px;
     font-size: 11px;
+}
+
+// Two different types:
+//  - outline - transaparent with border
+//  - filled - with background color
+.btn-outline {
+    color: white;
+    border-color: white;
+    border: 1px solid;
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active {
+        color: white;
+        background-color: @theme-primary;
+        border-color: white;
+        outline: none;
+    }
+}
+
+.btn-filled {
+    color: white;
+    background: @theme-primary;
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active{
+        background: darken(@theme-primary, 15%);
+        color: white;
+        outline: none;
+    }
+}
+
+// Modifications in color
+.btn-outline-tertiary {
+    .btn-outline;
+    color: @theme-tertiary;
+    border-color: @theme-tertiary;
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active {
+        background-color: @theme-tertiary;
+    }
+}
+.btn-filled-tertiary {
+    .btn-filled;
+    background: @theme-tertiary;
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active{
+        background: lighten(@theme-tertiary, 10%);
+    }
 }
 
 // Extras

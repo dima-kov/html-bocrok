@@ -1,5 +1,11 @@
-/* Medium Devices, .visible-md-* */
+/* Big Devices */
+@media (min-width: @desktop_max) {
+    .modal-dialog {
+        width: 400px;
+    }
+}
 
+/* Medium Devices, .visible-md-* */
 @media (min-width: @desktop_min) and (max-width: @desktop_max) {
     section.history {
         .timeline {
@@ -34,6 +40,9 @@
                 display: none;
             }
         }
+    }
+    .modal-dialog {
+        width: 400px;
     }
 }
 
@@ -75,6 +84,9 @@
                 display: none;
             }
         }
+    }
+    .modal-dialog {
+        width: 300px;
     }
 }
 
