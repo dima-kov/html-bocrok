@@ -744,6 +744,19 @@ footer ul li a.active {
   background-color: #fdcc52;
   border-color: white;
 }
+.btn-filled {
+  color: white;
+  background: #fdcc52;
+}
+.btn-filled:hover,
+.btn-filled:focus,
+.btn-filled:active,
+.btn-filled:active:focus,
+.btn-filled.active {
+  background: #fcb606;
+  color: white;
+  outline: none;
+}
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   text-transform: uppercase;

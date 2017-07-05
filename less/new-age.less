@@ -458,7 +458,9 @@ section.owner {
     }
 }
 
-section.form {}
+section.form {
+
+}
 
 section.history {
     .text-muted {
@@ -740,6 +742,20 @@ footer {
         color: white;
         background-color: @theme-primary;
         border-color: white;
+    }
+}
+
+.btn-filled {
+    color: white;
+    background: @theme-primary;
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &.active{
+        background: darken(@theme-primary, 15%);
+        color: white;
+        outline: none;
     }
 }
 
