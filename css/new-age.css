@@ -113,9 +113,6 @@ p {
 p.smaller {
   font-size: 16px;
 }
-.center {
-  text-align: center;
-}
 .vertical-center {
   margin-top: 10px;
   margin-bottom: 10px;
