@@ -161,8 +161,7 @@ input {
     }
 }
 
-// Homepage Header
-
+// Header
 header {
     position: relative;
     width: 100%;
@@ -240,7 +239,8 @@ section {
     }
 }
 
-section.download {
+/* --- Home page --- */
+section.main {
     padding: 150px 0;
     position: relative;
     h2 {
@@ -313,6 +313,33 @@ section.features {
     }
 }
 
+section.statistics {
+    .stat {
+        margin-top: 30px;
+        text-align: center;
+        & > i{
+            font-size: 60px;
+            transform: rotate(-360deg);
+            transition: font-size 1s ease-out, transform 1s ease;
+        }
+        &:hover > i{
+            cursor: pointer;
+            font-size: 80px;
+            transition: 1s;
+            transform: rotate(360deg);
+            .backgroud-gradient;
+        }
+        i {
+            font-size: 60px;
+            display: block;
+        }
+        span {
+            font-weight: 800;
+            font-size: 90px;
+        }
+    }
+}
+
 section.cta {
     position: relative;
     .background-cover;
@@ -360,6 +387,10 @@ section.contact {
     }
 }
 
+/* --- end --- Home page --- end --- */
+
+
+/* --- Single book page --- */
 section.single-book {
     text-align: left;
     img.book-image{
@@ -622,33 +653,65 @@ section.books {
         }
     }
 }
+/* --- end --- Single book page --- end --- */
 
-section.statistics {
-    .stat {
-        margin-top: 30px;
-        text-align: center;
-        & > i{
-            font-size: 60px;
-            transform: rotate(-360deg);
-            transition: font-size 1s ease-out, transform 1s ease;
+
+/* --- User page --- */
+section.user-header {
+    .info {
+        ul {
+            list-style-type: none;
+            & > li {
+                margin-top: 7px;
+                & > span {
+                    font-size: 16px;
+                    text-decoration: underline;
+                }
+                & > a {
+                    font-size: 18px;
+                    font-weight: 800;
+                }
+            }
         }
-        &:hover > i{
-            cursor: pointer;
-            font-size: 80px;
-            transition: 1s;
-            transform: rotate(360deg);
-            .backgroud-gradient;
+    }
+    .image {
+        img {
+            width: 250px;
+            height: 250px;
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
         }
-        i {
-            font-size: 60px;
+    }
+    .statistics {
+        margin-top: 20px;
+        & > span{
             display: block;
+            font-size: 16px;
+            font-weight: bold;
         }
-        span {
+        .opportunities {
+            display: inline;
+            border-radius: 5px;
             font-weight: 800;
-            font-size: 90px;
+            font-size: 60px;
+            padding: 10px;
+            span {
+                text-decoration: underline;
+            }
         }
     }
 }
+
+section.bg-secondary {
+    .timeline {
+        li{
+            &:hover > .timeline-panel{
+                background: lighten(@theme-secondary, 1%)
+            }
+        }
+    }
+}
+/* --- end --- User page --- end --- */
+
 
 footer {
     background-color: @gray-darker;
@@ -697,11 +760,20 @@ footer {
     background: @theme-primary;
     background: -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
     background: linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+    a {
+        color: @theme-tertiary;
+    }
 }
 .bg-principal {
     background: @theme-principal;
     background: -webkit-linear-gradient(@theme-principal , darken(@theme-principal, 5%));
     background: linear-gradient(@theme-principal, darken(@theme-principal, 5%));
+    color: white;
+}
+.bg-secondary {
+    background: @theme-secondary;
+    background: -webkit-linear-gradient(@theme-secondary , darken(@theme-secondary, 5%));
+    background: linear-gradient(@theme-secondary, darken(@theme-secondary, 5%));
     color: white;
 }
 

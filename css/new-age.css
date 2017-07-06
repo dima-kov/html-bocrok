@@ -18,17 +18,18 @@
   font-size: 11px;
 }
 .backgroud-gradient {
-  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
-  background: linear-gradient(to left, #7b4397, #dc2430);
+  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
+  background: linear-gradient(to left, #FF7043, #dc2430);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .delighted {
-  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
-  background: linear-gradient(to left, #7b4397, #dc2430);
+  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
+  background: linear-gradient(to left, #FF7043, #dc2430);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  font-family: 'Francois One', 'Open Sans', 'Arial', 'sans-serif';
 }
 .delighted::selection {
   background-color: #eeeeee;
@@ -233,11 +234,11 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), #FF7043;
   /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #FF7043, #dc2430);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #FF7043, #dc2430);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
@@ -306,32 +307,33 @@ section {
 section h2 {
   font-size: 50px;
 }
-section.download {
+/* --- Home page --- */
+section.main {
   padding: 150px 0;
   position: relative;
 }
-section.download h2 {
+section.main h2 {
   margin-top: 0;
   font-size: 50px;
 }
-section.download .badges .badge-link {
+section.main .badges .badge-link {
   display: block;
   margin-bottom: 25px;
 }
-section.download .badges .badge-link:last-child {
+section.main .badges .badge-link:last-child {
   margin-bottom: 0;
 }
-section.download .badges .badge-link img {
+section.main .badges .badge-link img {
   height: 60px;
 }
 @media (min-width: 768px) {
-  section.download .badges .badge-link {
+  section.main .badges .badge-link {
     display: inline-block;
     margin-bottom: 0;
   }
 }
 @media (min-width: 768px) {
-  section.download h2 {
+  section.main h2 {
     font-size: 70px;
   }
 }
@@ -366,8 +368,8 @@ section.features .feature-item h3 {
 }
 section.features .feature-item i {
   font-size: 80px;
-  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
-  background: linear-gradient(to left, #7b4397, #dc2430);
+  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
+  background: linear-gradient(to left, #FF7043, #dc2430);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -376,6 +378,33 @@ section.features .feature-item i {
   section.features .feature-item {
     max-width: none;
   }
+}
+section.statistics .stat {
+  margin-top: 30px;
+  text-align: center;
+}
+section.statistics .stat > i {
+  font-size: 60px;
+  transform: rotate(-360deg);
+  transition: font-size 1s ease-out, transform 1s ease;
+}
+section.statistics .stat:hover > i {
+  cursor: pointer;
+  font-size: 80px;
+  transition: 1s;
+  transform: rotate(360deg);
+  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
+  background: linear-gradient(to left, #FF7043, #dc2430);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section.statistics .stat i {
+  font-size: 60px;
+  display: block;
+}
+section.statistics .stat span {
+  font-weight: 800;
+  font-size: 90px;
 }
 section.cta {
   position: relative;
@@ -451,6 +480,8 @@ section.contact ul li.social-google-plus a {
 section.contact ul li.social-google-plus a:hover {
   background-color: #d73925;
 }
+/* --- end --- Home page --- end --- */
+/* --- Single book page --- */
 section.single-book {
   text-align: left;
 }
@@ -697,33 +728,49 @@ section.books [class*=' imghvr-'] a.btn:active {
   text: white;
   position: static;
 }
-section.statistics .stat {
-  margin-top: 30px;
-  text-align: center;
+/* --- end --- Single book page --- end --- */
+/* --- User page --- */
+section.user-header .info ul {
+  list-style-type: none;
 }
-section.statistics .stat > i {
-  font-size: 60px;
-  transform: rotate(-360deg);
-  transition: font-size 1s ease-out, transform 1s ease;
+section.user-header .info ul > li {
+  margin-top: 7px;
 }
-section.statistics .stat:hover > i {
-  cursor: pointer;
-  font-size: 80px;
-  transition: 1s;
-  transform: rotate(360deg);
-  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
-  background: linear-gradient(to left, #7b4397, #dc2430);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section.user-header .info ul > li > span {
+  font-size: 16px;
+  text-decoration: underline;
 }
-section.statistics .stat i {
-  font-size: 60px;
-  display: block;
-}
-section.statistics .stat span {
+section.user-header .info ul > li > a {
+  font-size: 18px;
   font-weight: 800;
-  font-size: 90px;
 }
+section.user-header .image img {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+section.user-header .statistics {
+  margin-top: 20px;
+}
+section.user-header .statistics > span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+section.user-header .statistics .opportunities {
+  display: inline;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 60px;
+  padding: 10px;
+}
+section.user-header .statistics .opportunities span {
+  text-decoration: underline;
+}
+section.bg-secondary .timeline li:hover > .timeline-panel {
+  background: #ff7448;
+}
+/* --- end --- User page --- end --- */
 footer {
   background-color: #222222;
   padding: 25px 0;
@@ -788,10 +835,19 @@ footer ul li a.active {
   background: -webkit-linear-gradient(#fdcc52, #fdc539);
   background: linear-gradient(#fdcc52, #fdc539);
 }
+.bg-primary a {
+  color: #dc2430;
+}
 .bg-principal {
   background: #16a085;
   background: -webkit-linear-gradient(#16a085, #138a72);
   background: linear-gradient(#16a085, #138a72);
+  color: white;
+}
+.bg-secondary {
+  background: #FF7043;
+  background: -webkit-linear-gradient(#FF7043, #ff5d29);
+  background: linear-gradient(#FF7043, #ff5d29);
   color: white;
 }
 .text-primary {
