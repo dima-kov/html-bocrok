@@ -41,6 +41,33 @@
   transition: 1s;
   transform: rotate(360deg);
 }
+.social-list li a {
+  display: block;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  font-size: 40px;
+  border-radius: 100%;
+  color: white;
+}
+.social-list li.social-twitter a {
+  background-color: #1da1f2;
+}
+.social-list li.social-twitter a:hover {
+  background-color: #0d95e8;
+}
+.social-list li.social-facebook a {
+  background-color: #3b5998;
+}
+.social-list li.social-facebook a:hover {
+  background-color: #344e86;
+}
+.social-list li.social-google-plus a {
+  background-color: #dd4b39;
+}
+.social-list li.social-google-plus a:hover {
+  background-color: #d73925;
+}
 html,
 body {
   height: 100%;
@@ -82,6 +109,9 @@ p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+p.smaller {
+  font-size: 16px;
 }
 .center {
   text-align: center;
@@ -394,10 +424,10 @@ section.contact h2 {
 section.contact h2 i {
   color: #dc2430;
 }
-section.contact ul.list-social {
+section.contact ul {
   margin-bottom: 0;
 }
-section.contact ul.list-social li a {
+section.contact ul li a {
   display: block;
   height: 80px;
   width: 80px;
@@ -406,22 +436,22 @@ section.contact ul.list-social li a {
   border-radius: 100%;
   color: white;
 }
-section.contact ul.list-social li.social-twitter a {
+section.contact ul li.social-twitter a {
   background-color: #1da1f2;
 }
-section.contact ul.list-social li.social-twitter a:hover {
+section.contact ul li.social-twitter a:hover {
   background-color: #0d95e8;
 }
-section.contact ul.list-social li.social-facebook a {
+section.contact ul li.social-facebook a {
   background-color: #3b5998;
 }
-section.contact ul.list-social li.social-facebook a:hover {
+section.contact ul li.social-facebook a:hover {
   background-color: #344e86;
 }
-section.contact ul.list-social li.social-google-plus a {
+section.contact ul li.social-google-plus a {
   background-color: #dd4b39;
 }
-section.contact ul.list-social li.social-google-plus a:hover {
+section.contact ul li.social-google-plus a:hover {
   background-color: #d73925;
 }
 section.single-book {
@@ -719,6 +749,42 @@ footer ul li a:focus,
 footer ul li a:active,
 footer ul li a.active {
   text-decoration: none;
+}
+#register-login .social-login li a {
+  display: block;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  font-size: 40px;
+  border-radius: 100%;
+  color: white;
+}
+#register-login .social-login li.social-twitter a {
+  background-color: #1da1f2;
+}
+#register-login .social-login li.social-twitter a:hover {
+  background-color: #0d95e8;
+}
+#register-login .social-login li.social-facebook a {
+  background-color: #3b5998;
+}
+#register-login .social-login li.social-facebook a:hover {
+  background-color: #344e86;
+}
+#register-login .social-login li.social-google-plus a {
+  background-color: #dd4b39;
+}
+#register-login .social-login li.social-google-plus a:hover {
+  background-color: #d73925;
+}
+#register-login .social-login li {
+  margin: 8px;
+}
+#register-login .social-login li a {
+  border-radius: 5px;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
 }
 .bg-primary {
   background: #fdcc52;

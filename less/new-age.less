@@ -47,6 +47,10 @@ p {
     margin-bottom: 20px;
 }
 
+p.smaller {
+    font-size: 16px;
+}
+
 .center {
     text-align: center;
 }
@@ -354,43 +358,9 @@ section.contact {
             color: @theme-tertiary;
         }
     }
-    ul.list-social {
+    ul {
+        .social-list;
         margin-bottom: 0;
-        li {
-            a {
-                display: block;
-                height: 80px;
-                width: 80px;
-                line-height: 80px;
-                font-size: 40px;
-                border-radius: 100%;
-                color: white;
-            }
-            &.social-twitter {
-                a {
-                    background-color: @brand-twitter;
-                    &:hover {
-                        background-color: darken(@brand-twitter, 5%);
-                    }
-                }
-            }
-            &.social-facebook {
-                a {
-                    background-color: @brand-facebook;
-                    &:hover {
-                        background-color: darken(@brand-facebook, 5%);
-                    }
-                }
-            }
-            &.social-google-plus {
-                a {
-                    background-color: @brand-google-plus;
-                    &:hover {
-                        background-color: darken(@brand-google-plus, 5%);
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -705,6 +675,21 @@ footer {
                 &.active {
                     text-decoration: none;
                 }
+            }
+        }
+    }
+}
+
+#register-login {
+    .social-login {
+        .social-list;
+        li {
+            margin: 8px;
+            a{
+                border-radius: 5px;
+                width: 65px;
+                height: 65px;
+                line-height: 65px;
             }
         }
     }

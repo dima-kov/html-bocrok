@@ -95,3 +95,41 @@
 		transform: rotate(360deg);
 	}
 }
+
+.social-list {
+	li {
+	    a {
+	        display: block;
+	        height: 80px;
+	        width: 80px;
+	        line-height: 80px;
+	        font-size: 40px;
+	        border-radius: 100%;
+	        color: white;
+	    }
+	    &.social-twitter {
+	        a {
+	            background-color: @brand-twitter;
+	            &:hover {
+	                background-color: darken(@brand-twitter, 5%);
+	            }
+	        }
+	    }
+	    &.social-facebook {
+	        a {
+	            background-color: @brand-facebook;
+	            &:hover {
+	                background-color: darken(@brand-facebook, 5%);
+	            }
+	        }
+	    }
+	    &.social-google-plus {
+	        a {
+	            background-color: @brand-google-plus;
+	            &:hover {
+	                background-color: darken(@brand-google-plus, 5%);
+	            }
+	        }
+	    }
+	}
+}
