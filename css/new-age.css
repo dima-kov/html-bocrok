@@ -18,14 +18,14 @@
   font-size: 11px;
 }
 .backgroud-gradient {
-  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
-  background: linear-gradient(to left, #FF7043, #dc2430);
+  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to left, #7b4397, #dc2430);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .delighted {
-  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
-  background: linear-gradient(to left, #FF7043, #dc2430);
+  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to left, #7b4397, #dc2430);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -234,11 +234,11 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background: url("../img/bg-pattern.png"), #FF7043;
+  background: url("../img/bg-pattern.png"), #7b4397;
   /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #FF7043, #dc2430);
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #FF7043, #dc2430);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
@@ -299,6 +299,98 @@ header .device-container .screen img {
 @media (min-width: 992px) {
   header .header-content .header-content-inner h1 {
     font-size: 50px;
+  }
+}
+header.catalogue {
+  background: url("../img/library.jpg");
+}
+header.catalogue h1 {
+  font-family: Fira Mono;
+  font-weight: bold;
+  font-size: 70px;
+}
+header.catalogue .header-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+header.catalogue .header-content {
+  text-align: center;
+}
+header.catalogue .header-content .header-content-inner {
+  position: relative;
+}
+header.catalogue .header-content a.scroll-icon {
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0;
+  padding-top: 80px;
+}
+header.catalogue .header-content a.scroll-icon:hover {
+  color: #777777;
+  font-family: pt-sans;
+  text-decoration: none;
+}
+header.catalogue .header-content a.scroll-icon span {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+header.catalogue .header-content a.scroll-icon span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+header.catalogue .header-content a.scroll-icon span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+header.catalogue .header-content a.scroll-icon span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (min-width: 768px) {
+  header.catalogue .header-content .header-content-inner h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  header.catalogue .header-content .header-content-inner h1 {
+    font-size: 70px;
   }
 }
 section {
@@ -368,8 +460,8 @@ section.features .feature-item h3 {
 }
 section.features .feature-item i {
   font-size: 80px;
-  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
-  background: linear-gradient(to left, #FF7043, #dc2430);
+  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to left, #7b4397, #dc2430);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -393,8 +485,8 @@ section.statistics .stat:hover > i {
   font-size: 80px;
   transition: 1s;
   transform: rotate(360deg);
-  background: -webkit-linear-gradient(to left, #FF7043, #dc2430);
-  background: linear-gradient(to left, #FF7043, #dc2430);
+  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to left, #7b4397, #dc2430);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -878,21 +970,9 @@ footer ul li a.active {
 .btn-outline:focus,
 .btn-outline:active:focus,
 .btn-outline.active {
-  color: white;
-  background-color: #fdcc52;
+  color: #333333;
+  background-color: #ffffff;
   border-color: white;
-  outline: none;
-}
-.btn-filled {
-  color: white;
-  background: #fdcc52;
-}
-.btn-filled:hover,
-.btn-filled:focus,
-.btn-filled:active:focus,
-.btn-filled.active {
-  background: #fcb606;
-  color: white;
   outline: none;
 }
 .btn-outline-tertiary {
@@ -906,8 +986,8 @@ footer ul li a.active {
 .btn-outline-tertiary:focus,
 .btn-outline-tertiary:active:focus,
 .btn-outline-tertiary.active {
-  color: white;
-  background-color: #fdcc52;
+  color: #333333;
+  background-color: #ffffff;
   border-color: white;
   outline: none;
 }
@@ -916,6 +996,18 @@ footer ul li a.active {
 .btn-outline-tertiary:active:focus,
 .btn-outline-tertiary.active {
   background-color: #dc2430;
+}
+.btn-filled {
+  color: white;
+  background: #fdcc52;
+}
+.btn-filled:hover,
+.btn-filled:focus,
+.btn-filled:active:focus,
+.btn-filled.active {
+  background: #fcb606;
+  color: white;
+  outline: none;
 }
 .btn-filled-tertiary {
   color: white;
@@ -935,6 +1027,27 @@ footer ul li a.active {
 .btn-filled-tertiary:active:focus,
 .btn-filled-tertiary.active {
   background: #e3505a;
+}
+.btn-filled-white {
+  color: white;
+  background: #fdcc52;
+  background: white;
+  color: #222222;
+}
+.btn-filled-white:hover,
+.btn-filled-white:focus,
+.btn-filled-white:active:focus,
+.btn-filled-white.active {
+  background: #fcb606;
+  color: white;
+  outline: none;
+}
+.btn-filled-white:hover,
+.btn-filled-white:focus,
+.btn-filled-white:active:focus,
+.btn-filled-white.active {
+  background: #cccccc;
+  color: #333333;
 }
 ::-moz-selection {
   color: white;

@@ -167,9 +167,9 @@ header {
     width: 100%;
     min-height: auto;
     overflow-y: hidden;
-    background: url("../img/bg-pattern.png"), @theme-secondary; /* fallback for old browsers */
-    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
-    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url("../img/bg-pattern.png"), @theme-purple; /* fallback for old browsers */
+    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-purple , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
+    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-purple , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     .header-content {
         text-align: center;
@@ -200,7 +200,7 @@ header {
             border-radius: 3px;
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: @tablet_min) {
         min-height: 100%;
         .header-content {
             text-align: left;
@@ -223,9 +223,106 @@ header {
             margin: 100px auto 0;
         }
     }
-    @media (min-width: 992px) {
+    @media (min-width: @desktop_min) {
         .header-content .header-content-inner h1 {
             font-size: 50px;
+        }
+    }
+}
+
+header.catalogue {
+    background: url("../img/library.jpg");
+    background: url("../img/library.jpg");
+    background: url("../img/library.jpg");
+    // filter: grayscale(0.4);
+    h1 {
+        font-family: Fira Mono;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .header-overlay {
+        background: rgba(0, 0, 0, 0.5)
+    }
+    .header-content {
+            text-align: center;
+            .header-content-inner {
+                position: relative;
+            }
+        a.scroll-icon {
+            color: white;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            position: absolute;
+            bottom: 0;
+            padding-top: 80px;
+            &:hover{
+                color: @gray-light;
+                font-family: pt-sans;
+
+                text-decoration: none;
+            }
+            span {
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                width: 24px;
+                height: 24px;
+                margin-left: -12px;
+                border-left: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-animation: sdb07 2s infinite;
+                animation: sdb07 2s infinite;
+                opacity: 0;
+                box-sizing: border-box;
+                &:nth-of-type(1) {
+                    -webkit-animation-delay: 0s;
+                    animation-delay: 0s;
+                }
+                &:nth-of-type(2) {
+                    top: 16px;
+                    -webkit-animation-delay: .15s;
+                    animation-delay: .15s;
+                }
+                &:nth-of-type(3) {
+                    top: 32px;
+                    -webkit-animation-delay: .3s;
+                    animation-delay: .3s;
+                }
+            }
+            @-webkit-keyframes sdb07 {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            @keyframes sdb07 {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    @media (min-width: @tablet_min) {
+        .header-content .header-content-inner h1 {
+            font-size: 50px;
+        }
+    }
+    @media (min-width: @desktop_min) {
+        .header-content .header-content-inner h1 {
+            font-size: 70px;
         }
     }
 }
@@ -299,10 +396,7 @@ section.features {
         }
         i {
             font-size: 80px;
-              background: -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              background: linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
+            .backgroud-gradient;
         }
     }
     @media(min-width: 992px) {
@@ -801,6 +895,7 @@ footer {
 // Two different types:
 //  - outline - transaparent with border
 //  - filled - with background color
+
 .btn-outline {
     color: white;
     border-color: white;
@@ -809,13 +904,25 @@ footer {
     &:focus,
     &:active:focus,
     &.active {
-        color: white;
-        background-color: @theme-primary;
+        color: @gray-dark;
+        background-color: darken(white, 0%);
         border-color: white;
         outline: none;
     }
 }
+.btn-outline-tertiary {
+    .btn-outline;
+    color: @theme-tertiary;
+    border-color: @theme-tertiary;
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active {
+        background-color: @theme-tertiary;
+    }
+}
 
+// Filled buttons
 .btn-filled {
     color: white;
     background: @theme-primary;
@@ -828,19 +935,6 @@ footer {
         outline: none;
     }
 }
-
-// Modifications in color
-.btn-outline-tertiary {
-    .btn-outline;
-    color: @theme-tertiary;
-    border-color: @theme-tertiary;
-    &:hover,
-    &:focus,
-    &:active:focus,
-    &.active {
-        background-color: @theme-tertiary;
-    }
-}
 .btn-filled-tertiary {
     .btn-filled;
     background: @theme-tertiary;
@@ -849,6 +943,19 @@ footer {
     &:active:focus,
     &.active{
         background: lighten(@theme-tertiary, 10%);
+    }
+}
+
+.btn-filled-white {
+    .btn-filled;
+    background: white;
+    color: @gray-darker;
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active{
+        background: darken(white, 20%);
+        color: @gray-dark;
     }
 }
 
