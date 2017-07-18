@@ -857,12 +857,30 @@ section.catalogue-books [class*=' imghvr-'] a.btn:active {
   text: white;
   position: static;
 }
-section.catalogue-books ul {
-  margin-bottom: 40px;
+section.catalogue-books .filter .filter-item {
+  margin-bottom: 20px;
 }
-section.catalogue-books ul li {
-  display: inline;
-  margin-left: 20px;
+section.catalogue-books .filter .filter-item ul {
+  padding: 0;
+  margin-left: 10px;
+  list-style-type: none;
+}
+section.catalogue-books .filter .filter-item ul li {
+  margin-bottom: 10px;
+}
+section.catalogue-books .filter .filter-item span {
+  font-size: 18px;
+  color: #333333;
+  display: block;
+  margin-bottom: 15px;
+}
+section.catalogue-books .filter .filter-item input {
+  position: absolute;
+  visibility: hidden;
+}
+section.catalogue-books .filter .filter-item input:checked + label {
+  color: white;
+  background-color: #dc2430;
 }
 section.catalogue-books .load-more {
   margin-top: 60px;

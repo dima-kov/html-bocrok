@@ -55,10 +55,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#download">Main</a>
+                        <a href="">Main</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#features">Books</a>
+                        <a href="catalogue.html">Books</a>
                     </li>
                     <li>
                         <a href="#" class="btn btn-outline" data-toggle="modal" data-target="#register-login">Register/Login</a>
@@ -77,9 +77,9 @@
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1>Вибери ту, що до вподоби</h1>
-                            <a href="#catalogue" class="btn btn-outline btn-xl page-scroll">Шукати</a>
+                            <a href="#catalogue-books" class="btn btn-outline btn-xl page-scroll">Шукати</a>
                         </div>
-                        <a href="#catalogue" class="page-scroll scroll-icon"><span></span><span></span><span></span></a>
+                        <a href="#catalogue-books" class="page-scroll scroll-icon"><span></span><span></span><span></span></a>
                     </div>
                 </div>
             </div>
@@ -96,207 +96,242 @@
                         <hr>
                     </div>
                 </div>
-                <div class="col-lg-12 text-center">
-                    <ul>
-                        <li><a class="btn btn-outline-tertiary" href="#">Пригодницькі</a></li>
-                        <li><a class="btn btn-outline-tertiary" href="#">Романи</a></li>
-                        <li><a class="btn btn-outline-tertiary" href="#">Лірика</a></li>
-                        <li><a class="btn btn-outline-tertiary" href="#">Прикладні</a></li>
-                    </ul>
-                </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course01.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
+                <div class="col-md-2">
+                    <form id="filter" class="filter" method="GET">
+                        <div class="filter-item">
+                            <span class="">За жанром:</span>
+                            <ul>
+                                <li>
+                                    <input id="genre1" type="checkbox" name="genre" value="1">
+                                    <label class="btn btn-outline-tertiary" for="genre1">Пригодницькі</label>
+                                </li>
+                                <li>
+                                    <input id="genre2" type="checkbox" name="genre" value="2">
+                                    <label class="btn btn-outline-tertiary" for="genre2">Романи</label>
+                                </li>
+                                <li>
+                                    <input id="genre3" type="checkbox" name="genre" value="3">
+                                    <label class="btn btn-outline-tertiary" for="genre3">Лірика</label>
+                                </li>
+                                <li>
+                                    <input id="genre4" type="checkbox" name="genre" value="4">
+                                    <label class="btn btn-outline-tertiary" for="genre4">Прикладні</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter-item">
+                            <span class="">За мовою:</span>
+                            <ul>
+                                <li>
+                                    <input id="lang1" type="checkbox" name="lang" value="1">
+                                    <label class="btn btn-outline-tertiary" for="lang1">Українська</label>
+                                </li>
+                                <li>
+                                    <input id="lang2" type="checkbox" name="lang" value="2">
+                                    <label class="btn btn-outline-tertiary" for="lang2">Англійська</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <input type="submit" name="">
+                    </form>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course02.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course03.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course04.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course05.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course06.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course01.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course02.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course03.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course04.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course05.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course06.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course01.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course02.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course03.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course04.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                            <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course05.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <figure class="imghvr-fold-up text-center">
-                        <img src="img/images/course06.jpg" class="img-responsive">
-                        <figcaption>
-                            <h3>Course Name</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course01.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course02.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course03.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course04.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course05.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course06.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course01.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course02.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course03.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course04.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course05.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course06.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course01.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course02.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course03.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course04.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                    <a href="#" class="btn btn-outline btn-xl">Доступно!</a>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course05.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <figure class="imghvr-fold-up text-center">
+                                <img src="img/images/course06.jpg" class="img-responsive">
+                                <figcaption>
+                                    <h3>Course Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="text-center load-more">

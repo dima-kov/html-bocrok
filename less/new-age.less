@@ -726,13 +726,30 @@ section.books {
 /* Catalogue books */
 section.catalogue-books{
     .books;
-    ul {
-        margin-bottom: 40px;
-        li{
-            display: inline;
-            margin-left: 20px;
-            a{
-                // color: white;
+    .filter {
+        .filter-item{
+            margin-bottom: 20px;
+            ul {
+                padding: 0;
+                margin-left: 10px;
+                list-style-type: none;
+                li{
+                    margin-bottom: 10px;
+                }
+            }
+            span {
+                font-size: 18px;
+                color: @gray-dark;
+                display: block;
+                margin-bottom: 15px;
+            }
+            input {
+                position: absolute;
+                visibility: hidden;
+                &:checked + label{
+                    color: white;
+                    background-color: @theme-tertiary;
+                }
             }
         }
     }
