@@ -134,3 +134,31 @@
 	    }
 	}
 }
+.books {
+    [class^='imghvr-'],
+    [class*=' imghvr-']{
+        background-color: @theme-primary;
+        figcaption {
+            background-color: @theme-primary;
+            color: @theme-tertiary;
+        }
+        h3 {
+            color: @theme-tertiary;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        p {
+            font-size: 16px;
+        }
+        a.btn {
+            position: static;
+            color: @theme-tertiary;
+            &:focus,
+            &:active{
+                background: @theme-tertiary;
+                text: white;
+                position: static;
+            }
+        }
+    }
+}

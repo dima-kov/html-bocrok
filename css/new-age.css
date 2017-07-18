@@ -69,6 +69,38 @@
 .social-list li.social-google-plus a:hover {
   background-color: #d73925;
 }
+.books [class^='imghvr-'],
+.books [class*=' imghvr-'] {
+  background-color: #fdcc52;
+}
+.books [class^='imghvr-'] figcaption,
+.books [class*=' imghvr-'] figcaption {
+  background-color: #fdcc52;
+  color: #dc2430;
+}
+.books [class^='imghvr-'] h3,
+.books [class*=' imghvr-'] h3 {
+  color: #dc2430;
+  font-weight: bold;
+  margin-top: 0;
+}
+.books [class^='imghvr-'] p,
+.books [class*=' imghvr-'] p {
+  font-size: 16px;
+}
+.books [class^='imghvr-'] a.btn,
+.books [class*=' imghvr-'] a.btn {
+  position: static;
+  color: #dc2430;
+}
+.books [class^='imghvr-'] a.btn:focus,
+.books [class*=' imghvr-'] a.btn:focus,
+.books [class^='imghvr-'] a.btn:active,
+.books [class*=' imghvr-'] a.btn:active {
+  background: #dc2430;
+  text: white;
+  position: static;
+}
 html,
 body {
   height: 100%;
@@ -788,42 +820,58 @@ section.history .timeline > li:nth-child(even) .line:before {
   /* Safari */
   transform: rotate(44deg);
 }
-section.books [class^='imghvr-'],
-section.books [class*=' imghvr-'] {
+section.books .more-link {
+  margin-top: 60px;
+}
+/* --- end --- Single book page --- end --- */
+/* Catalogue books */
+section.catalogue-books [class^='imghvr-'],
+section.catalogue-books [class*=' imghvr-'] {
   background-color: #fdcc52;
 }
-section.books [class^='imghvr-'] figcaption,
-section.books [class*=' imghvr-'] figcaption {
+section.catalogue-books [class^='imghvr-'] figcaption,
+section.catalogue-books [class*=' imghvr-'] figcaption {
   background-color: #fdcc52;
   color: #dc2430;
 }
-section.books [class^='imghvr-'] h3,
-section.books [class*=' imghvr-'] h3 {
+section.catalogue-books [class^='imghvr-'] h3,
+section.catalogue-books [class*=' imghvr-'] h3 {
   color: #dc2430;
   font-weight: bold;
   margin-top: 0;
 }
-section.books [class^='imghvr-'] p,
-section.books [class*=' imghvr-'] p {
+section.catalogue-books [class^='imghvr-'] p,
+section.catalogue-books [class*=' imghvr-'] p {
   font-size: 16px;
 }
-section.books [class^='imghvr-'] a.btn,
-section.books [class*=' imghvr-'] a.btn {
+section.catalogue-books [class^='imghvr-'] a.btn,
+section.catalogue-books [class*=' imghvr-'] a.btn {
   position: static;
   color: #dc2430;
 }
-section.books [class^='imghvr-'] a.btn:focus,
-section.books [class*=' imghvr-'] a.btn:focus,
-section.books [class^='imghvr-'] a.btn:active,
-section.books [class*=' imghvr-'] a.btn:active {
+section.catalogue-books [class^='imghvr-'] a.btn:focus,
+section.catalogue-books [class*=' imghvr-'] a.btn:focus,
+section.catalogue-books [class^='imghvr-'] a.btn:active,
+section.catalogue-books [class*=' imghvr-'] a.btn:active {
   background: #dc2430;
   text: white;
   position: static;
 }
-/* --- end --- Single book page --- end --- */
+section.catalogue-books ul {
+  margin-bottom: 40px;
+}
+section.catalogue-books ul li {
+  display: inline;
+  margin-left: 20px;
+}
+section.catalogue-books .load-more {
+  margin-top: 60px;
+}
+/* --- end --- Catalogue books --- end --- */
 /* --- User page --- */
 section.user-header .info ul {
   list-style-type: none;
+  padding: 10px;
 }
 section.user-header .info ul > li {
   margin-top: 7px;
@@ -956,6 +1004,7 @@ footer ul li a.active {
   letter-spacing: 2px;
   font-size: 11px;
   border-radius: 300px;
+  padding: 7px 20px;
 }
 .btn-xl {
   padding: 15px 45px;
@@ -995,6 +1044,7 @@ footer ul li a.active {
 .btn-outline-tertiary:focus,
 .btn-outline-tertiary:active:focus,
 .btn-outline-tertiary.active {
+  color: white;
   background-color: #dc2430;
 }
 .btn-filled {

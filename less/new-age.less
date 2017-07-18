@@ -232,9 +232,6 @@ header {
 
 header.catalogue {
     background: url("../img/library.jpg");
-    background: url("../img/library.jpg");
-    background: url("../img/library.jpg");
-    // filter: grayscale(0.4);
     h1 {
         font-family: Fira Mono;
         font-weight: bold;
@@ -720,41 +717,37 @@ section.history {
 }
 
 section.books {
-    [class^='imghvr-'],
-    [class*=' imghvr-']{
-        background-color: @theme-primary;
-        figcaption {
-            background-color: @theme-primary;
-            color: @theme-tertiary;
-        }
-        h3 {
-            color: @theme-tertiary;
-            font-weight: bold;
-            margin-top: 0;
-        }
-        p {
-            font-size: 16px;
-        }
-        a.btn {
-            position: static;
-            color: @theme-tertiary;
-            &:focus,
-            &:active{
-                background: @theme-tertiary;
-                text: white;
-                position: static;
-            }
-        }
+    .more-link {
+        margin-top: 60px;
     }
 }
 /* --- end --- Single book page --- end --- */
 
+/* Catalogue books */
+section.catalogue-books{
+    .books;
+    ul {
+        margin-bottom: 40px;
+        li{
+            display: inline;
+            margin-left: 20px;
+            a{
+                // color: white;
+            }
+        }
+    }
+    .load-more {
+        margin-top: 60px;
+    }
+}
+/* --- end --- Catalogue books --- end --- */
 
 /* --- User page --- */
 section.user-header {
     .info {
         ul {
             list-style-type: none;
+            padding: 10px;
             & > li {
                 margin-top: 7px;
                 & > span {
@@ -885,6 +878,7 @@ footer {
 .btn {
     .alt-font;
     border-radius: 300px;
+    padding: 7px 20px;
 }
 
 .btn-xl {
@@ -918,6 +912,7 @@ footer {
     &:focus,
     &:active:focus,
     &.active {
+        color: white;
         background-color: @theme-tertiary;
     }
 }
