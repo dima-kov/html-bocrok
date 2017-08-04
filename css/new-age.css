@@ -69,6 +69,11 @@
 .social-list li.social-google-plus a:hover {
   background-color: #d73925;
 }
+.vertical-center-flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .books [class^='imghvr-'],
 .books [class*=' imghvr-'] {
   background-color: #fdcc52;
@@ -287,6 +292,10 @@ header {
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
+}
+header.mini {
+  height: 35vh;
+  min-height: 35vh;
 }
 header .header-content {
   text-align: center;
@@ -941,6 +950,95 @@ section.user-header .statistics .opportunities {
 }
 section.user-header .statistics .opportunities span {
   text-decoration: underline;
+}
+section.readings-status {
+  background: #fdcc52;
+  background: -webkit-linear-gradient(#fdcc52, #fdc539);
+  background: linear-gradient(#fdcc52, #fdc539);
+}
+section.readings-status a {
+  color: #dc2430;
+}
+section.readings-status .title {
+  margin-left: 20px;
+}
+section.readings-status .title hr {
+  max-width: 100%;
+  margin: 5px auto 10px;
+}
+section.readings-status .item {
+  height: 300px;
+  border: 2px solid #FF7043;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+section.readings-status .item h3 {
+  font-size: 30px;
+}
+section.readings-status .item img {
+  height: 100%;
+  max-width: 100%;
+}
+section.readings-status .item .book,
+section.readings-status .item .user,
+section.readings-status .item .info {
+  height: 100%;
+}
+section.readings-status .item .book {
+  text-align: left;
+}
+section.readings-status .item .user {
+  text-align: right;
+}
+section.readings-status .item .reading-line {
+  height: 100%;
+}
+section.readings-status .item .reading-line .pipeline {
+  font-size: 22px;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+section.readings-status .item .reading-line .pipeline ul {
+  list-style-type: none;
+  margin: auto;
+}
+section.readings-status .item .reading-line .pipeline li {
+  margin-bottom: 10px;
+  color: #777777;
+}
+section.readings-status .item .reading-line .pipeline li span {
+  margin-left: 45px;
+}
+section.readings-status .item .reading-line .pipeline li.done {
+  color: #dc2430;
+  text-decoration: underline;
+  font-weight: bold;
+}
+section.readings-status .item .reading-line .pipeline li.done:hover {
+  cursor: default;
+}
+section.readings-status .item .reading-line .pipeline li i {
+  font-size: 35px;
+  margin-right: 15px;
+}
+section.readings-status .item .reading-line .book-time {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+section.readings-status .item .reading-line .book-time progress {
+  width: 95%;
+  height: 30px;
+  vertical-align: bottom;
+  display: block;
+}
+section.readings-status .item .reading-line .book-time span {
+  font-size: 12px;
 }
 section.bg-secondary .timeline li:hover > .timeline-panel {
   background: #ff7448;
